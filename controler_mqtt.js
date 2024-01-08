@@ -84,7 +84,7 @@ module.exports = {
                 }
                 const dataArray = [TS,SOILMOISTURE1, SOILMOISTURE2, SOILMOISTURE3, WATERFLOW1, WATERFLOW2, WATERFLOW3, WATERFLOW4, WATERFLOW5, WATERFLOW6, WATERFLOW7, WATERFLOW8, WATERFLOW9, WATERFLOW10, WATERFLOW11, WATERFLOW12, WEIGHT1, WEIGHT2, WEIGHT3, WEIGHT4, INFRARED1, INFRARED2, ANEMO, WINDDIRECTION, DHT, PH, SUHUAIR, TDSMETER, RAINGAUGE, COOLINGSYSTEM, UVLAMPU];
  
-                const insertQuery = `INSERT INTO gistingics (datetime, soilmoisture_1, soilmoisture_2, soilmoisture_3, waterflow_1, waterflow_2, waterflow_3, waterflow_4, waterflow_5, waterflow_6, waterflow_7, waterflow_8, waterflow_9, waterflow_10, waterflow_11, waterflow_12, weight_1, weight_2, weight_3, weight_4, infrared_1, infrared_2, anemo, winddirect, dht, ph, suhuair, tdsmeter, raingauge, coolingsystem, uvlampu) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31)`;
+                const insertQuery = `INSERT INTO gistingics  (datetime, soilmoisture_1, soilmoisture_2, soilmoisture_3, waterflow_1, waterflow_2, waterflow_3, waterflow_4, waterflow_5, waterflow_6, waterflow_7, waterflow_8, waterflow_9, waterflow_10, waterflow_11, waterflow_12, weight_1, weight_2, weight_3, weight_4, infrared_1, infrared_2, anemo, winddirect, dht,  ph, suhuair, tdsmeter, raingauge, coolingsystem, uvlampu) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31)`;
 
                 
                 dbase_mqtt.query(insertQuery, dataArray, (err, res) => {

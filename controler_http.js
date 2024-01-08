@@ -17,7 +17,8 @@ dbase_rest.connect();
 module.exports = {
 
     async getDataGistingNew(req, res) {
-        const data = await dbase_rest.query(`SELECT datetime, soilmoisture_1, soilmoisture_2, soilmoisture_3, waterflow_1, waterflow_2, waterflow_3, waterflow_4, waterflow_5, waterflow_6, waterflow_7, waterflow_8, waterflow_9, waterflow_10, waterflow_11, waterflow_12, weight_1, weight_2, weight_3, weight_4, infrared_1, infrared_2, anemo, winddirect, dht, ph, suhuair, tdsmeter, raingauge, coolingsystem, uvlampu
+        const data = await dbase_rest.query(`SELECT datetime, soilmoisture_1, soilmoisture_2, soilmoisture_3, waterflow_1, waterflow_2, waterflow_3, waterflow_4, waterflow_5, waterflow_6, waterflow_7, waterflow_8, waterflow_9
+        , waterflow_10, waterflow_11, waterflow_12, weight_1, weight_2, weight_3, weight_4, infrared_1, infrared_2, anemo, winddirect, dht, ph, suhuair, tdsmeter, raingauge, coolingsystem, uvlampu
         FROM gistingics ORDER BY datetime DESC LIMIT 100`);
     
         if (data.rowCount > 0) {
