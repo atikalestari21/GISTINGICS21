@@ -5,11 +5,10 @@ const cors = require('cors');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
-
+//tes push
 // const privateKey = fs.readFileSync('/etc/letsencrypt/live/vps.isi-net.org/privkey.pem','utf8');
 // const certificate = fs.readFileSync('/etc/letsencrypt/live/vps.isi-net.org/cert.pem','utf8');
 // const ca = fs.readFileSync('/etc/letsencrypt/live/vps.isi-net.org/chain.pem','utf8');
-
 // const credentials = {
 // 	key: privateKey,
 // 	cert: certificate,
@@ -92,8 +91,8 @@ httpServer.listen(process.env.API_PORT, () => {
 const topic = process.env.TOPIC;
 const mqtt_connect = require('./mqtt_config.js')
 const {incomingData} = require('./controler_mqtt.js') 
-  // Subscribe topic to receive data from raspberryPi
-  // Data From Gisting
+// Subscribe topic to receive data from raspberryPi
+// Data From Gisting
 //Subscribe topic to receive API request
 mqtt_connect.subscribe(topic, (err) => {
   if (!err) {
